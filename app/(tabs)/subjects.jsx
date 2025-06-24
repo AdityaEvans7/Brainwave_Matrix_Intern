@@ -12,7 +12,7 @@ export default function SubjectsScreen() {
     setSelected(subject);
     setTimeout(() => {
       router.push(`/quiz/${subject.toLowerCase()}`);
-    }, 150); // slight delay to show feedback
+    }, 150); 
   };
 
   return (

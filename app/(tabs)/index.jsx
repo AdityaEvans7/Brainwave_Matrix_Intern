@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import {
   View,
   Text,
@@ -7,8 +7,8 @@ import {
   Animated,
   Image,
   Easing,
-} from 'react-native';
-import { useRouter } from 'expo-router';
+} from "react-native";
+import { useRouter } from "expo-router";
 
 const SplashScreen = () => {
   const router = useRouter();
@@ -32,20 +32,20 @@ const SplashScreen = () => {
   }, []);
 
   const handleStart = () => {
-    router.push('/subjects');
+    router.push("/subjects");
   };
 
   return (
     <View style={styles.container}>
-      {/* Animated Logo */}
+      {/* Logo */}
       <Animated.Image
-  source={require('../../assets/images/logo.png')}
-  style={[styles.logo, { opacity: fadeAnim, transform: [{ scale: scaleAnim }] }]}
-  resizeMode="contain"
-/>
-
-
-    
+        source={require("../../assets/images/logo.png")}
+        style={[
+          styles.logo,
+          { opacity: fadeAnim, transform: [{ scale: scaleAnim }] },
+        ]}
+        resizeMode="contain"
+      />
 
       {/* Start Button */}
       <TouchableOpacity onPress={handleStart} style={styles.button}>
@@ -60,9 +60,9 @@ export default SplashScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     paddingHorizontal: 20,
   },
   logo: {
@@ -70,16 +70,16 @@ const styles = StyleSheet.create({
     height: 350,
     marginBottom: 2,
   },
-  
+
   button: {
-    backgroundColor: '#15CAC3',
+    backgroundColor: "#15CAC3",
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 30,
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
